@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/ducument logo.png">
+    <title>𝖗𝖊𝖘𝖙𝖆𝖚𝖗𝖆𝖓𝖙</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your main CSS -->
+    <style>
+        .gallery-container {
+            padding: 40px;
+            background-color: bisque;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar">
+        <div class="one">
+            <a href="index.html">🍽 𝖗𝖊𝖘𝖙𝖆𝖚𝖗𝖆𝖓𝖙</a>
+        </div>
+        <div class="two">
+            <a href="index.html">Home</a>
+            <a href="#">Gallery</a>
+            <a href="aboutt.html">About us</a>
+            <a href="contact.html">Contact</a>
+            <a href="auth.html" class="signn">Sign up</a>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <h1 class="gallery-title">Our Delicious Moments</h1>
+        <div class="image-grid">
+            <img src="images/ga1.jpg" alt="">
+            <img src="images/ga2.jpg" alt="">
+            <img src="images/ga3.jpg" alt="">
+            <img src="images/ga4.jpg" alt="">
+            <img src="images/ga5.jpg" alt="">
+            <img src="images/ga6.jpg" alt="">
+            <img src="images/ga7.jpg" alt="">
+            <img src="images/ga8.jpg" alt="">
+            <img src="images/ga9.jpg" alt="">
+            <img src="images/ga10.jpg" alt="">
+            <img src="images/ga11.jpg" alt="">
+            <img src="images/ga12.jpg" alt="">
+            <img src="images/ga13.jpg" alt="">
+            <img src="images/ga14.jpg" alt="">
+            <img src="images/ga15.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+</html>

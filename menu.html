@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="images/ducument logo.png">
+    <title>𝖗𝖊𝖘𝖙𝖆𝖚𝖗𝖆𝖓𝖙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      padding: 30px 15px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      font-size: 36px;
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    .menu-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 50px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .menu-table th, .menu-table td {
+      border-bottom: 1px solid #eee;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    .menu-table th {
+      background-color: #f4f4f4;
+      font-weight: 600;
+      color: #2d3436;
+    }
+
+    .menu-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .category-header {
+      background-color: #74b9ff;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      .menu-table thead tr {
+        display: none;
+      }
+
+      .menu-table td {
+        position: relative;
+        padding-left: 50%;
+      }
+
+      .menu-table td::before {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      .menu-table td:nth-child(1)::before { content: "Item"; }
+      .menu-table td:nth-child(2)::before { content: "Half Plate"; }
+      .menu-table td:nth-child(3)::before { content: "Full Plate"; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hotel Menu</h1>
+
+  <!-- VEG Category -->
+  <table class="menu-table">
+    <tr><td colspan="3" class="category-header">VEG</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Paneer Butter Masala</td><td>₹120</td><td>₹200</td></tr>
+    <tr><td>Palak Paneer</td><td>₹110</td><td>₹190</td></tr>
+    <tr><td>Mix Veg</td><td>₹100</td><td>₹170</td></tr>
+    <tr><td>Veg Kolhapuri</td><td>₹100</td><td>₹170</td></tr>
+    <tr><td>Chana Masala</td><td>₹90</td><td>₹150</td></tr>
+    <tr><td>Aloo Gobi</td><td>₹80</td><td>₹140</td></tr>
+    <tr><td>Bhindi Masala</td><td>₹90</td><td>₹150</td></tr>
+    <tr><td>Dal Tadka</td><td>₹80</td><td>₹140</td></tr>
+    <tr><td>Rajma Masala</td><td>₹90</td><td>₹160</td></tr>
+    <tr><td>Kadhai Paneer</td><td>₹130</td><td>₹210</td></tr>
+  </table>
+
+  <!-- NON-VEG Category -->
+  <table class="menu-table">
+    <tr><td colspan="3" class="category-header">NON-VEG</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Chicken Curry</td><td>₹140</td><td>₹240</td></tr>
+    <tr><td>Butter Chicken</td><td>₹160</td><td>₹270</td></tr>
+    <tr><td>Chicken Masala</td><td>₹150</td><td>₹250</td></tr>
+    <tr><td>Chicken Do Pyaza</td><td>₹150</td><td>₹260</td></tr>
+    <tr><td>Mutton Curry</td><td>₹180</td><td>₹300</td></tr>
+    <tr><td>Mutton Rogan Josh</td><td>₹190</td><td>₹320</td></tr>
+    <tr><td>Egg Curry</td><td>₹100</td><td>₹160</td></tr>
+    <tr><td>Keema Masala</td><td>₹160</td><td>₹280</td></tr>
+    <tr><td>Chicken Korma</td><td>₹170</td><td>₹290</td></tr>
+    <tr><td>Andhra Chicken</td><td>₹160</td><td>₹270</td></tr>
+  </table>
+
+  <!-- Add more categories the same way: FISH, STARTERS, DRINKS, SNACKS, DESSERTS, BREAKFAST -->
+
+  <table class="menu-table">
+  <tr><td colspan="3" class="category-header">FISH</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Fish Curry</td><td>₹130</td><td>₹220</td></tr>
+    <tr><td>Fish Fry</td><td>₹140</td><td>₹230</td></tr>
+    <tr><td>Fish Masala</td><td>₹150</td><td>₹250</td></tr>
+    <tr><td>Prawns Masala</td><td>₹160</td><td>₹280</td></tr>
+    <tr><td>Fish Tikka</td><td>₹150</td><td>₹260</td></tr>
+    <tr><td>Grilled Fish</td><td>₹170</td><td>₹290</td></tr>
+    <tr><td>Fish Koliwada</td><td>₹160</td><td>₹270</td></tr>
+    <tr><td>Fish Biryani</td><td>₹150</td><td>₹240</td></tr>
+    <tr><td>Fish in Garlic Sauce</td><td>₹160</td><td>₹270</td></tr>
+    <tr><td>Fish Coconut Curry</td><td>₹150</td><td>₹250</td></tr>
+</table>
+
+    <!-- Starters -->
+    <table class="menu-table">
+    <tr><td colspan="3" class="category-header">STARTERS</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Veg Spring Roll</td><td>₹80</td><td>₹140</td></tr>
+    <tr><td>Chicken Tikka</td><td>₹130</td><td>₹220</td></tr>
+    <tr><td>Paneer Tikka</td><td>₹110</td><td>₹190</td></tr>
+    <tr><td>Hara Bhara Kabab</td><td>₹90</td><td>₹160</td></tr>
+    <tr><td>Chicken Lollipop</td><td>₹140</td><td>₹240</td></tr>
+    <tr><td>Seekh Kabab</td><td>₹120</td><td>₹210</td></tr>
+    <tr><td>Aloo Tikki</td><td>₹70</td><td>₹120</td></tr>
+    <tr><td>Fish Fingers</td><td>₹130</td><td>₹220</td></tr>
+    <tr><td>Veg Manchurian</td><td>₹90</td><td>₹150</td></tr>
+    <tr><td>Paneer Chilli</td><td>₹110</td><td>₹180</td></tr>
+    </table>
+
+    <!-- Drinks -->
+    <table class="menu-table">
+    <tr><td colspan="3" class="category-header">DRINKS</td></tr>
+    <tr><th>Item</th><th>Small</th><th>Large</th></tr>
+    <tr><td>Lassi</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Lemon Soda</td><td>₹30</td><td>₹50</td></tr>
+    <tr><td>Cold Coffee</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Masala Chaas</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Fresh Lime Juice</td><td>₹35</td><td>₹55</td></tr>
+    <tr><td>Mango Shake</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Buttermilk</td><td>₹30</td><td>₹50</td></tr>
+    <tr><td>Watermelon Juice</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Milkshake (Strawberry)</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Soft Drink (Can)</td><td>₹40</td><td>₹60</td></tr>
+    </table>
+
+    <!-- Snacks -->
+    <table class="menu-table">
+    <tr><td colspan="3" class="category-header">SNACKS</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Samosa</td><td>₹20</td><td>₹40</td></tr>
+    <tr><td>Pakora</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Veg Sandwich</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Bhel Puri</td><td>₹40</td><td>₹60</td></tr>
+    <tr><td>Pav Bhaji</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Masala Dosa</td><td>₹70</td><td>₹100</td></tr>
+    <tr><td>French Fries</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Onion Rings</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Aloo Chaat</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Cheese Balls</td><td>₹60</td><td>₹90</td></tr>
+    </table>
+    <!-- Dessert -->
+    <table class="menu-table">
+    <tr><td colspan="3" class="category-header">DESSERT</td></tr>
+    <tr><th>Item</th><th>Small</th><th>Full</th></tr>
+    <tr><td>Gulab Jamun</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Ice Cream (2 Scoops)</td><td>₹50</td><td>₹90</td></tr>
+    <tr><td>Brownie</td><td>₹60</td><td>₹100</td></tr>
+    <tr><td>Rasgulla</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Kheer</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Fruit Salad</td><td>₹50</td><td>₹90</td></tr>
+    <tr><td>Carrot Halwa</td><td>₹60</td><td>₹100</td></tr>
+    <tr><td>Phirni</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Custard</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Malai Kulfi</td><td>₹60</td><td>₹90</td></tr>
+    </table>
+
+    <!-- Breakfast -->
+    <table class="menu-table">
+    <tr><td colspan="3" class="category-header">BREAKFAST</td></tr>
+    <tr><th>Item</th><th>Half Plate</th><th>Full Plate</th></tr>
+    <tr><td>Paratha with Curd</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Idli Sambar</td><td>₹35</td><td>₹60</td></tr>
+    <tr><td>Poha</td><td>₹30</td><td>₹50</td></tr>
+    <tr><td>Upma</td><td>₹35</td><td>₹60</td></tr>
+    <tr><td>Aloo Puri</td><td>₹40</td><td>₹70</td></tr>
+    <tr><td>Masala Dosa</td><td>₹60</td><td>₹90</td></tr>
+    <tr><td>Omelette Toast</td><td>₹50</td><td>₹80</td></tr>
+    <tr><td>Stuffed Paratha</td><td>₹50</td><td>₹90</td></tr>
+    <tr><td>Chole Bhature</td><td>₹60</td><td>₹100</td></tr>
+    <tr><td>Pancakes</td><td>₹60</td><td>₹100</td></tr>
+  </table>
+
+</body>
+</html>

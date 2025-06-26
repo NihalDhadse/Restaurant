@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="images/ducument logo.png">
+    <title>𝖗𝖊𝖘𝖙𝖆𝖚𝖗𝖆𝖓𝖙</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e6dbf8, #f3e7ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background: #f9f0ff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(128, 90, 213, 0.3);
+      width: 320px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      background: #e2ccff;
+      border: none;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 6px;
+      margin: 0 2px;
+    }
+
+    .tabs button:hover {
+      background: #d8b8ff;
+    }
+
+    form {
+      display: none;
+      flex-direction: column;
+    }
+
+    form.active {
+      display: flex;
+    }
+
+    input {
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #c8aaff;
+      border-radius: 5px;
+      background-color: #fff;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      margin-top: 15px;
+      background: #b084f7;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: #a66efc;
+    }
+
+    h3 {
+      text-align: center;
+      color: #6a0dad;
+    }
+
+    .message {
+      margin-top: 10px;
+      text-align: center;
+      color: red;
+      font-size: 14px;
+    }
+
+    .first{
+      display: flex;
+      justify-content: space-between;
+    
+    }
+    .man_container{
+      margin-right: 50px;
+      margin-left: 0px;
+    
+    }
+  </style>
+</head>
+<body>
+
+  <div class="first">
+    <div class="man_container">
+      <img src="images/man3d.png" height="400px" width="400px">
+    </div>
+
+  <div class="form-container">
+    <div class="tabs">
+      <button onclick="showForm('signup')">Sign Up</button>
+      <button onclick="showForm('login')">Login</button>
+    </div>
+
+    <form id="signupForm" class="active" onsubmit="handleSignup(event)">
+      <h3>Create Account</h3>
+      <input type="text" id="signupUsername" placeholder="Username" required />
+      <input type="email" id="signupEmail" placeholder="Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+      <div class="message" id="signupMessage"></div>
+    </form>
+
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <h3>Welcome Back</h3>
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <div class="message" id="loginMessage"></div>
+    </form>
+  </div>
+  </div>
+
+  <script>
+    function showForm(type) {
+      document.getElementById("signupForm").classList.remove("active");
+      document.getElementById("loginForm").classList.remove("active");
+      document.getElementById("signupMessage").textContent = '';
+      document.getElementById("loginMessage").textContent = '';
+      if (type === "signup") {
+        document.getElementById("signupForm").classList.add("active");
+      } else {
+        document.getElementById("loginForm").classList.add("active");
+      }
+    }
+
+    function handleSignup(e) {
+      e.preventDefault();
+      const username = document.getElementById("signupUsername").value.trim();
+      const email = document.getElementById("signupEmail").value.trim();
+      const password = document.getElementById("signupPassword").value;
+
+      if (!username || !email || !password) {
+        document.getElementById("signupMessage").textContent = "Please fill all fields.";
+        return;
+      }
+
+      // Save user data to localStorage (by username)
+      const user = { username, email, password };
+      localStorage.setItem(`user_${username}`, JSON.stringify(user));
+      document.getElementById("signupMessage").style.color = "green";
+      document.getElementById("signupMessage").textContent = "🎉 Account successfully created!";
+      e.target.reset();
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const username = document.getElementById("loginUsername").value.trim();
+      const password = document.getElementById("loginPassword").value;
+
+      const userData = localStorage.getItem(`user_${username}`);
+      const messageEl = document.getElementById("loginMessage");
+
+      if (!userData) {
+        messageEl.textContent = "❌ User not found. Please sign up.";
+        messageEl.style.color = "red";
+        return;
+      }
+
+      const user = JSON.parse(userData);
+      if (user.password === password) {
+        messageEl.style.color = "green";
+        messageEl.textContent = "✅ Logged in successfully!";
+      } else {
+        messageEl.style.color = "red";
+        messageEl.textContent = "❌ Incorrect password.";
+      }
+    }
+  </script>
+
+</body>
+</html>

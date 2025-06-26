@@ -1,0 +1,406 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 50px;
+  }
+  
+  .one a, .two a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+  }
+  .one{
+    background-color: black;
+  }
+  .two {
+    display: flex;
+    align-items: center;
+    background-color: black;
+  }
+  
+button{
+    background: rgb(2, 156, 2);
+    border: none;
+    font-size: large;
+    border-radius: 1px solid black;
+    width: 100px;
+    padding: 4px 20px;
+      
+    border-radius: 50px;
+}
+
+.signn{
+    background: rgb(2, 156, 2);
+    border: none;
+    font-size: large;
+    border-radius: 1px solid black;
+    width: 75px;
+    padding: 7px 0px 7px 25px;
+    border-radius: 50px;
+    
+}
+
+.signn:hover{
+    background-color: green;
+}
+
+button:hover{
+    background-color: green;
+}
+
+#logo img{
+    height: 50px;
+    width: auto;
+}
+
+a{
+    
+    margin-right: 60px;
+    text-decoration: none;
+    color: white;
+    padding-left: 60px;
+    display: inline ;
+    background-color: black;
+    font-size: large;
+    
+}
+.middle{
+    display: flex;
+    padding-top: 20px;
+}
+.righttt{
+    padding-left: 150px;
+    padding-top: 30px;
+    
+    
+    
+}
+.lefft{
+     padding-left: 40px;
+     padding-top: 70px;
+}
+.lefft h1{
+    font-size: 70px;
+}
+.lefft h3{
+    font-size: 20px;
+}
+
+.btn{
+    display: flex;
+    
+    
+}
+
+.btn .le a{
+    display: inline-block;
+    background: #ff523b;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    }
+    .btn .le a:hover{
+        background: brown;
+    }
+.btn .ri a{
+       
+    display: inline-block;
+    background: #ff523b;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0 0 20px;
+    border-radius: 30px;
+        }
+.btn .ri a:hover{
+            background: brown;
+        }
+
+.img2{
+    margin-top: 20px;
+    animation-name: time;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 3;    
+
+}
+@keyframes time {
+    from{margin-left: -230px;}
+    to{margin-left: 238px;}
+    
+}
+.hed{
+    padding-top: 10px;
+    text-align: center;
+    
+}
+.book{
+    height: 100px;
+    width: 70%;
+    border: 1px solid white;
+    background-color: white;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 180px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    padding-left: 120px;
+    
+}
+input[value="date"]{
+    border: 1px solid black;
+    height: 50px;
+    width: 140px;
+    border-radius: 50px;
+    margin-right: 50px;
+    font-size: large;
+}
+input[value="time"]{
+    border: 1px solid black;
+    height: 50px;
+    width: 140px;
+    border-radius: 50px;
+    margin-right: 50px;
+    font-size: large;
+}
+
+input[type="text"]{
+    border: 1px solid black;
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    margin-right: 50px;
+    font-size: large;
+}
+input[type="submit"]{
+    display: inline-block;
+    background: rgb(2, 156, 2);
+    color: white;
+    padding: 16px 60px;
+    margin: 30px 0 30px 30px ;
+    border-radius: 30px;
+    border: none;
+}
+input[type="submit"]:hover{
+    background: green;
+}
+ 
+
+input{
+    padding-left: 20px;
+    }
+
+    .deli{
+        padding-top: 20px;
+        
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .card-1{
+        height: 320px;
+        width: 250px;
+        border: 1px solid white;
+        border-radius: 20px;
+        background-color: white;
+        text-align: center;
+        transition: 0.5s;
+       
+    }
+    .card-1:hover{
+        transform: translateY(-10px);
+        box-shadow: 2px 2px 20px rgb(161, 160, 160);
+    }
+
+    .card-1 h2 {
+        
+        background-color: white;
+    }
+    .card-1 p{
+        background-color: white;
+    }
+    .card-1 a{
+     display: inline-block;
+    background: #ff523b;
+    color: white;
+    padding: 8px 30px;
+    margin: 10px 0 ;
+    border-radius: 30px;
+
+    }
+    .card-1 a:hover{
+        background: brown;
+    }
+    
+
+    .covid{
+        display: flex;
+        justify-content: space-around;
+    }
+    .hed a{
+        display: inline-block;
+        background: rgb(2, 156, 2);
+        color: white;
+        padding: 8px 40px;
+        margin: 10px 0 15px 0 ;
+        border-radius: 30px;
+        border: none;
+    }
+    .hed a:hover{
+        background: green;
+    }
+    .below-1{
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .below-1 a{
+        display: inline-block;
+        background: #ff523b;
+        color: white;
+        padding: 8px 30px;
+        margin: 10px 0 ;
+        border-radius: 30px;
+    }
+    .first{
+        padding-top: 80px;
+        
+    }
+    .first a:hover{
+        background-color: brown;
+    }
+    .first h1{
+        font-size: 40px;
+    }
+    .first h3{
+        font-size: 25px;
+    }
+    .first p{
+        font-size: 20px;
+    }
+    .card-1 .fa{
+        background-color: white;
+        color: #ff523b;
+    }
+     .if{
+        display: flex;
+        justify-content: space-evenly;
+     }
+    .books{
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+    .books button{
+        display: inline-block;
+        background: rgb(2, 156, 2);
+        color: white;
+        padding: 16px 6px 16px 6px;
+        margin: 30px 0 30px 30px ;
+        border-radius: 30px;
+        border: none;
+        width: 440px;
+        margin-right: 60px;
+    }
+    .books button:hover{
+        background-color: green;
+    }
+    .books input{
+        margin-top: 20px;
+        width: 500px;
+        background-color: rgb(245, 200, 145);
+        font-size: larger;
+    }
+    .books textarea{
+        padding: 20px 50px 50px 20px;
+        border: 1px solid black;
+        border-radius: 40px;
+        margin-top: 20px;
+        margin-right: 25px;
+        width: 450px;
+        background-color: rgb(245, 200, 145);
+        font-size: larger;
+    }
+    .footer{
+        height: 400px;
+        width: 100%;
+        background-color: rgb(219, 151, 23);
+        margin-top: 20px;
+    }
+    .foot{
+        display: flex;
+        
+        background-color:rgb(219, 151, 23) ;
+        padding-top: 40px;
+        
+    }
+    .one1{
+        background-color: rgb(219, 151, 23) ;
+    }
+    .one1 a{
+        background-color: rgb(219, 151, 23) ;
+        display: block;
+        color: black;
+        padding-top: 20px;
+        width: 170px;
+        
+
+    }
+    .two2{
+        background-color: rgb(219, 151, 23) ;
+    }
+    .two2 a{
+        background-color: rgb(219, 151, 23) ;
+        display: block;
+        color: black;
+        padding-top: 20px;
+        margin-left: 90px;
+        width: 170px;
+    }
+    .three3{
+        background-color: rgb(219, 151, 23) ;
+        margin-left: 650px;
+    }
+    .three3 button{
+        display: inline-block;
+        background: rgb(2, 156, 2);
+        color: white;
+        padding: 8px 20px;
+        margin: 10px 0 15px 45px ;
+        border-radius: 30px;
+        border: none;
+    }
+    .three3 button:hover{
+        background-color: green;
+    }
+    .three3 a{
+        background-color: rgb(219, 151, 23);
+        
+    }
+    .three3 img{
+        height: 50px;
+        width: 50px;
+        border: 2px solid white;
+        border-radius: 50%;        
+        margin-left: 10px;
+
+    }
+
+
+    
+    
+
+
